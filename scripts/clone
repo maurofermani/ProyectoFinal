@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# != 0 ]; then
+
+#git clone git://localhost/proyecto
+git clone git://localhost/$1
+
+else
+        echo "Ingrese el nombre de la carpeta"
+fi
+
