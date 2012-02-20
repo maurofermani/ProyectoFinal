@@ -87,10 +87,9 @@ public class PuntoGit {
      * @return verdadero si la operación se realizó con éxito
      */
     public boolean pushAll() {
-        int excecute;
+        int execute;
         try {
-            
-            excecute = console.execute("push algo");
+            execute = console.execute("push algo " + box.getName());
             
         } catch (IOException ex) {
             Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null, ex);
