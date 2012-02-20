@@ -11,13 +11,14 @@ import puntoGit.PuntoGit;
 public class JBox extends javax.swing.JFrame {
 
     private JFileChooser fileChooser;
+    private PuntoGit pg;
     
     public JBox() {
         initComponents();
         
-        PuntoGit pg = new PuntoGit("/home/fermani/Tesis/GIT/pi/");
+//        PuntoGit pg = new PuntoGit("/home/fermani/Tesis/GIT/pi/");
         
-        pg.init();
+//        pg.init();
     }
 
     @SuppressWarnings("unchecked")
@@ -80,7 +81,8 @@ public class JBox extends javax.swing.JFrame {
             File file = fileChooser.getSelectedFile();
             System.out.println(file.getAbsoluteFile());
             System.out.println(file.getName());
-            
+            pg = new PuntoGit(file);
+            pg.init();
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
