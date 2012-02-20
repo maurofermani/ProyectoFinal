@@ -21,6 +21,14 @@ public class PuntoGit {
     public PuntoGit(String path) {
         this.box = new File(path);
     }
+    
+    public void setBox(String path) {
+        this.box = new File(path);
+    }
+    
+    public void setBox(File box) {
+        this.box = box;
+    }
 
     public File getBox() {
         return box;
@@ -31,14 +39,70 @@ public class PuntoGit {
      * @return verdadero si pudo realizar la operación
      */
     public boolean init() {
+        int execute;
         try {
-            int execute = console.execute("initClient " + box.getAbsolutePath());
+            
+            //creo e inicializo la carpeta en el servidor
+            execute = console.execute("initServer " + box.getName());
+
+            //inicializo la carpeta del cliente
+            execute = console.execute("initClient " + box.getAbsolutePath());
+            
+            this.pushAll();       
+            
+            
+            
         } catch (IOException ex) {
             Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         } catch (InterruptedException ex) {
             Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
         
         return true;
     }
+    
+    public boolean add(String path) {
+        int execute;
+        try {
+            
+            //agrego el o los archivos modificados
+            execute = console.execute("cd " + box.getName());
+            execute = console.execute("git add " + path);
+            
+        } catch (IOException ex) {
+            Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        } catch (InterruptedException ex) {
+            Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+        
+        return true;
+    }
+    
+    /**
+     * Agrega los cambios y realiza un push al servidor
+     * @return verdadero si la operación se realizó con éxito
+     */
+    public boolean pushAll() {
+        int excecute;
+        try {
+            
+            excecute = console.execute("push algo");
+            
+        } catch (IOException ex) {
+            Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        } catch (InterruptedException ex) {
+            Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+        
+        return true;
+    }
+    
+    
+    
 }
