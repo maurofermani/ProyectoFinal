@@ -46,7 +46,7 @@ public class PuntoGit {
             execute = console.execute("initServer " + box.getName());
 
             //inicializo la carpeta del cliente
-            execute = console.execute("initClient " + box.getAbsolutePath());
+            execute = console.execute("initClient " + box.getAbsolutePath() + " " + box.getName());
             
             this.pushAll();       
             
@@ -68,7 +68,6 @@ public class PuntoGit {
         try {
             
             //agrego el o los archivos modificados
-            execute = console.execute("cd " + box.getName());
             execute = console.execute("git add " + path);
             
         } catch (IOException ex) {
@@ -89,10 +88,10 @@ public class PuntoGit {
     public boolean pushAll() {
         int execute;
         try {
-            execute = console.execute("push algo " + box.getName());
+            execute = console.execute("push \"algo nuevo\" " + box.getAbsolutePath());
             
         } catch (IOException ex) {
-            Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null,   ex);
             return false;
         } catch (InterruptedException ex) {
             Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null, ex);

@@ -16,9 +16,9 @@ public class JBox extends javax.swing.JFrame {
     public JBox() {
         initComponents();
         
-//        PuntoGit pg = new PuntoGit("/home/fermani/Tesis/GIT/pi/");
+        PuntoGit pg = new PuntoGit("/home/fermani/Tesis/GIT/p30");
         
-//        pg.init();
+        pg.init();
     }
 
     @SuppressWarnings("unchecked")
