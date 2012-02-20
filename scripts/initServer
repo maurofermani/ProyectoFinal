@@ -1,0 +1,23 @@
+echo "initServer"
+
+if [ $# != 0 ]; then
+
+#Nombre de la carpeta a compartir
+PROY=$1
+
+cd /var/cache/git
+#Creo un directorio con la carpeta a compartir
+mkdir $PROY
+cd $PROY
+
+#inicializo el proyecto
+git init 
+git config color.ui true
+git config --bool core.bare true 
+touch .git/git-daemon-export-ok
+
+else
+	echo "Ingrese el nombre de la carpeta"
+fi
+
+echo "Fin initServer"

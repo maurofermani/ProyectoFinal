@@ -1,0 +1,24 @@
+echo "InitClient"
+
+if [ $# != 0 ]; then
+
+#Nombre de la carpeta a compartir
+PROY=$2
+CARP=$1
+
+#Me ubico en la carpeta a compartir
+cd $CARP
+
+#inicializo el proyecto
+git init 
+git config color.ui true
+#git config --bool core.bare true 
+#agrego el origen
+git remote add origin git://localhost/$PROY
+
+
+else
+	echo "Ingrese el nombre de la carpeta"
+fi
+
+echo "Fin initClient"

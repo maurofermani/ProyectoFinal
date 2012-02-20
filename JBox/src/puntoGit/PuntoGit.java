@@ -88,7 +88,7 @@ public class PuntoGit {
     public boolean pushAll() {
         int execute;
         try {
-            execute = console.execute("push 'algo nuevo' " + box.getAbsolutePath());
+            execute = console.execute("push algo " + box.getAbsolutePath());
             
         } catch (IOException ex) {
             Logger.getLogger(PuntoGit.class.getName()).log(Level.SEVERE, null,   ex);
