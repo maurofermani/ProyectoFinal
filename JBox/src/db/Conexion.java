@@ -44,7 +44,7 @@ public class Conexion {
         usuario = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost/JBox", "jbox", "jbox");
+            conexion = DriverManager.getConnection("jdbc:mysql://192.168.0.106/JBox", "jbox", "jbox");
             st = conexion.createStatement();
         } catch (SQLException ex) {
             frame.logger(Level.SEVERE, ex.getSQLState());
