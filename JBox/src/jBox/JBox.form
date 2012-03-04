@@ -63,7 +63,7 @@
                   <Font name="Dialog" size="12" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/sincronizar/sincr_24.png"/>
+                  <Image iconType="3" name="/imagenes/sincronizar/sincr_24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Actualizar"/>
                 <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -80,7 +80,7 @@
                   <Font name="Dialog" size="12" style="0"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/guardar/guardar_24.png"/>
+                  <Image iconType="3" name="/imagenes/guardar/guardar_24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Guardar"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -261,7 +261,7 @@
                       <Font name="Dialog" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Imagenes/agregar/compartir_24.png"/>
+                      <Image iconType="3" name="/imagenes/agregar/compartir_24.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Agregar Carpeta"/>
                     <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -281,7 +281,7 @@
                       <Font name="Dialog" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Imagenes/compartir/compartir_24.png"/>
+                      <Image iconType="3" name="/imagenes/compartir/compartir_24.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Compartir"/>
                     <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -301,7 +301,7 @@
                       <Font name="Dialog" size="12" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Imagenes/estado/status_24.png"/>
+                      <Image iconType="3" name="/imagenes/estado/status_24.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Estado"/>
                     <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
