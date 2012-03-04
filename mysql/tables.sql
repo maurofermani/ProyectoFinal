@@ -13,7 +13,7 @@ create table usuarios
 create table carpetas
   (
 	id integer not null auto_increment,
-	carpeta VARCHAR(254),
+	carpeta VARCHAR(255),
 	
 	primary key(id)
 
@@ -33,7 +33,8 @@ create table usuario_carpeta
   (
 	id_usuario integer not null,
 	id_carpeta integer not null,
-	id_tipo integer not null
+	id_tipo integer not null,
+	carpeta_local VARCHAR(255)
   ) ENGINE=InnoDB;
 
 
