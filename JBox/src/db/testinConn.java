@@ -26,13 +26,13 @@ public class testinConn {
             }
             
             
-            st.executeUpdate("insert into otra values (10, 'prueba');", Statement.RETURN_GENERATED_KEYS);
-            rs = st.getGeneratedKeys();
-            int id = 0;
-            while (rs.next()) {
-                id = rs.getInt(1);
-            }
-            System.out.println("ID: " + id);
+//            st.executeUpdate("insert into otra values (10, 'prueba');", Statement.RETURN_GENERATED_KEYS);
+//            rs = st.getGeneratedKeys();
+//            int id = 0;
+//            while (rs.next()) {
+//                id = rs.getInt(1);
+//            }
+//            System.out.println("ID: " + id);
             
             
         } catch (SQLException ex) {

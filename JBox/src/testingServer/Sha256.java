@@ -21,7 +21,7 @@ public class Sha256 {
      */
     public static void main(String[] args) {
         try {
-            String password = "mauro";
+            String password = "pablo";
      
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.update(password.getBytes());

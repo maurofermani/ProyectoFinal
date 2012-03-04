@@ -1,4 +1,4 @@
-package db;
+package db.registros;
 
 /**
  *
@@ -10,8 +10,14 @@ public class Usuario {
     private String login;
     private String nombre;
 
+    public Usuario() {
+        this(0);
+    }
+
     public Usuario(int id) {
         this.id = id;
+        this.login = "";
+        this.nombre = "";
     }
 
     public int getId() {
@@ -37,5 +43,4 @@ public class Usuario {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
 }
