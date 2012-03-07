@@ -1,7 +1,7 @@
 package db.registros;
 
 import puntoGit.PuntoGit;
-import utils.Console;
+import utils.RemoteConsole;
 
 /**
  *
@@ -14,7 +14,7 @@ public class UsuarioCarpeta {
     private Tipo tipo;
     private PuntoGit puntoGit;
 
-    public UsuarioCarpeta(Console console) {
+    public UsuarioCarpeta(RemoteConsole console) {
         this.usuario = new Usuario();
         this.carpeta = new Carpeta();
         this.tipo = new Tipo();

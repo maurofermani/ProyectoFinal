@@ -11,7 +11,7 @@ import java.util.logging.SimpleFormatter;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
-import utils.Console;
+import utils.RemoteConsole;
 
 /**
  *
@@ -21,7 +21,7 @@ public class GenericFrame extends javax.swing.JFrame {
 
     public static final Logger logger = Logger.getLogger(JBox.class.getName());
     private Conexion conexion;
-    private Console console;
+    private RemoteConsole console;
 
     public GenericFrame() throws IOException {
         super();
@@ -52,7 +52,7 @@ public class GenericFrame extends javax.swing.JFrame {
         loggerConsole.addHandler(fh);
         loggerConsole.setLevel(Level.ALL);
         fh.setFormatter(formatter);
-        console = new Console(loggerConsole);
+        console = new RemoteConsole();
 
 
         try {
@@ -101,7 +101,7 @@ public class GenericFrame extends javax.swing.JFrame {
         logger.log(level, log);
     }
 
-    public Console getConsole() {
+    public RemoteConsole getConsole() {
         return console;
     }
 }

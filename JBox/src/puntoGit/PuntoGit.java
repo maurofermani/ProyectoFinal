@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import utils.Buffer;
-import utils.Console;
+import utils.RemoteConsole;
 
 /**
  *
@@ -17,14 +17,14 @@ import utils.Console;
 public class PuntoGit {
 
     private File box;
-    private Console console;
+    private RemoteConsole console;
 
-    public PuntoGit(File carpeta, Console console) {
+    public PuntoGit(File carpeta, RemoteConsole console) {
         this.box = carpeta;
         this.console = console;
     }
 
-    public PuntoGit(String path, Console console) {
+    public PuntoGit(String path, RemoteConsole console) {
         this.box = new File(path);
         this.console = console;
     }
@@ -65,7 +65,7 @@ public class PuntoGit {
             conexion.execUpdate(qry);
             
             //creo e inicializo la carpeta en el servidor
-            buffer = console.execute(new String[] {"initServer", box.getName()});
+            buffer = console.initRemoteFolder(box.getName());
 
             //inicializo la carpeta del cliente
             buffer = console.execute(new String[] {"initClient", box.getAbsolutePath(), box.getName()});
