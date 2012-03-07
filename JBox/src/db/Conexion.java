@@ -88,16 +88,30 @@ public class Conexion {
         this.usuario = usuario;
     }
 
+    /**
+     * Comienzo de una transaccion
+     * @throws SQLException 
+     */
     public void initTransaction() throws SQLException {
+        conexion.setAutoCommit(false);
+    }
+
+    /**
+     * Rolback de una transaccion
+     * @throws SQLException 
+     */
+    public void rollback() throws SQLException {
+        conexion.rollback();
         conexion.setAutoCommit(true);
     }
 
-    public void rollback() throws SQLException {
-        conexion.rollback();
-    }
-
+    /**
+     * Fin de una transaccion
+     * @throws SQLException 
+     */
     public void endTransaction() throws SQLException {
-        conexion.setAutoCommit(false);
+        conexion.commit();
+        conexion.setAutoCommit(true);
     }
     
     public void logger(Level level, String log) {

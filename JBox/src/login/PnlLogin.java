@@ -52,7 +52,7 @@ public class PnlLogin extends javax.swing.JPanel {
         });
 
         btnIngresar.setBackground(new java.awt.Color(153, 204, 153));
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/login/login_24.png"))); // NOI18N
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/login/login_24.png"))); // NOI18N
         btnIngresar.setText("Ingresar");
         btnIngresar.setMargin(new java.awt.Insets(2, 2, 2, 2));
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +112,7 @@ public class PnlLogin extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(btnIngresar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblError, javax.swing.GroupLayout.DEFAULT_SIZE, 15, Short.MAX_VALUE)
+                .addComponent(lblError, javax.swing.GroupLayout.DEFAULT_SIZE, 5, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents

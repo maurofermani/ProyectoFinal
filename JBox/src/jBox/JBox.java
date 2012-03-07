@@ -1,6 +1,7 @@
 package jBox;
 
 import db.registros.UsuarioCarpeta;
+import java.io.Console;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -79,7 +80,7 @@ public class JBox extends generic.GenericFrame {
         tbrBotonesCarpetas.setFloatable(false);
         tbrBotonesCarpetas.setRollover(true);
 
-        btnActCarpeta.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        btnActCarpeta.setFont(new java.awt.Font("Dialog", 0, 12));
         btnActCarpeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/sincronizar/sincr_24.png"))); // NOI18N
         btnActCarpeta.setText("Actualizar");
         btnActCarpeta.setMargin(new java.awt.Insets(2, 2, 2, 2));
@@ -90,7 +91,7 @@ public class JBox extends generic.GenericFrame {
         });
         tbrBotonesCarpetas.add(btnActCarpeta);
 
-        btnGuardar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        btnGuardar.setFont(new java.awt.Font("Dialog", 0, 12));
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/guardar/guardar_24.png"))); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.setFocusable(false);
@@ -144,7 +145,7 @@ public class JBox extends generic.GenericFrame {
         pnlNorte.setBackground(new java.awt.Color(184, 184, 255));
         pnlNorte.setPreferredSize(new java.awt.Dimension(845, 80));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/config/config_32.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/config/config_32.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlNorteLayout = new javax.swing.GroupLayout(pnlNorte);
         pnlNorte.setLayout(pnlNorteLayout);
@@ -192,7 +193,7 @@ public class JBox extends generic.GenericFrame {
         });
         jToolBar2.add(btnAgrCarp);
 
-        btnCompartir.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        btnCompartir.setFont(new java.awt.Font("Dialog", 0, 12));
         btnCompartir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/compartir/compartir_24.png"))); // NOI18N
         btnCompartir.setText("Compartir");
         btnCompartir.setMargin(new java.awt.Insets(2, 2, 2, 2));
@@ -204,7 +205,7 @@ public class JBox extends generic.GenericFrame {
         });
         jToolBar2.add(btnCompartir);
 
-        btnStatus.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        btnStatus.setFont(new java.awt.Font("Dialog", 0, 12));
         btnStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/estado/status_24.png"))); // NOI18N
         btnStatus.setText("Estado");
         btnStatus.setMargin(new java.awt.Insets(2, 2, 2, 2));

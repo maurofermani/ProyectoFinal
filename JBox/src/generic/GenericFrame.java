@@ -4,6 +4,8 @@ import db.Conexion;
 import jBox.JBox;
 import java.io.File;
 import java.io.IOException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,16 +45,14 @@ public class GenericFrame extends javax.swing.JFrame {
             System.exit(1);
         }
 
-        file = new File(getClass().getResource("/log/").getPath() + "loggerConsole.log");
-        if (!file.exists()) {
-            file.createNewFile();
+        
+        try {
+            console = new Console();
+        } catch (RemoteException ex) {
+            Logger.getLogger(GenericFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NotBoundException ex) {
+            Logger.getLogger(GenericFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Logger loggerConsole = Logger.getLogger(JBox.class.getName());
-        fh = new FileHandler(file.getAbsolutePath(), true);
-        loggerConsole.addHandler(fh);
-        loggerConsole.setLevel(Level.ALL);
-        fh.setFormatter(formatter);
-        console = new Console(loggerConsole);
 
 
         try {
