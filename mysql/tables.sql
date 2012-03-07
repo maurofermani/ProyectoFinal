@@ -21,7 +21,7 @@ create table carpetas
 
 create table tipos
   (
-	id integer not null auto_incremet,
+	id integer not null auto_increment,
 	descripcion VARCHAR(20),
 
 	primary key(id)

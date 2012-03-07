@@ -13,7 +13,7 @@ import java.util.logging.SimpleFormatter;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
-import utils.Console;
+import utils.RemoteConsole;
 
 /**
  *
@@ -23,9 +23,12 @@ public class GenericFrame extends javax.swing.JFrame {
 
     public static final Logger logger = Logger.getLogger(JBox.class.getName());
     private Conexion conexion;
-    private Console console;
+    private RemoteConsole console;
 
-    public GenericFrame() throws IOException {
+    public GenericFrame() throws 
+            IOException, 
+            RemoteException, 
+            NotBoundException {
         super();
 
         // Conexion y loggers
@@ -45,14 +48,8 @@ public class GenericFrame extends javax.swing.JFrame {
             System.exit(1);
         }
 
-        
-        try {
-            console = new Console();
-        } catch (RemoteException ex) {
-            Logger.getLogger(GenericFrame.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NotBoundException ex) {
-            Logger.getLogger(GenericFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //Creo una consola remota (ejacuta tambien comandos locales)
+        console = new RemoteConsole();
 
 
         try {
@@ -101,7 +98,7 @@ public class GenericFrame extends javax.swing.JFrame {
         logger.log(level, log);
     }
 
-    public Console getConsole() {
+    public RemoteConsole getConsole() {
         return console;
     }
 }

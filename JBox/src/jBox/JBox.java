@@ -1,8 +1,9 @@
 package jBox;
 
 import db.registros.UsuarioCarpeta;
-import java.io.Console;
 import java.io.IOException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -29,7 +30,7 @@ public class JBox extends generic.GenericFrame {
     private JXCollapsiblePane pnlCollapsiblePane;
     private DialogoMensage dialogoMensaje;
 
-    public JBox() throws IOException {
+    public JBox() throws IOException, RemoteException, NotBoundException {
         super();
         DialogLogin dialogLogin = new DialogLogin(this);
         dialogLogin.setVisible(true);
@@ -314,10 +315,14 @@ public class JBox extends generic.GenericFrame {
             public void run() {
                 try {
                     new JBox().setVisible(true);
+                } catch (RemoteException ex) {
+                    Logger.getLogger(JBox.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
-                    Exception e = new Exception("No se encontró el archivo de logger", ex);
+                    Logger.getLogger(JBox.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (NotBoundException ex) {
                     Logger.getLogger(JBox.class.getName()).log(Level.SEVERE, null, ex);
                 }
+
             }
         });
 
